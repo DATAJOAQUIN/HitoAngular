@@ -1,0 +1,30 @@
+<div style="width: 90%; margin: 0 auto;"class="usercontact-list">
+  <table style="background-color:burlywood; padding: 5%;border-radius: 10px;" class="table table-bordered mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp">
+    <thead class="thead-dark">
+      <tr>
+        <th class="mdl-data-table__cell--non-numeric">Id</th>
+        <th class="mdl-data-table__cell--non-numeric">Nombre</th>
+        <th class="mdl-data-table__cell--non-numeric">Apellidos</th>
+        <th class="mdl-data-table__cell--non-numeric">Email</th>
+        <th class="mdl-data-table__cell--non-numeric">Editar</th>
+        <th class="mdl-data-table__cell--non-numeric">Borrar</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let usercon of usercontacts">
+        <td class="mdl-data-table__cell--non-numeric">{{ usercon.id }}</td>
+        <td class="mdl-data-table__cell--non-numeric">{{ usercon.firstname }}</td>
+        <td class="mdl-data-table__cell--non-numeric">{{ usercon.lastname }}</td>
+        <td class="mdl-data-table__cell--non-numeric">{{ usercon.email }}</td>
+        <td class="mdl-data-table__cell--non-numeric">
+          <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored"  (click)="editUserContact(usercon) ">Editar</button>
+        </td>
+        <td class="mdl-data-table__cell--non-numeric">
+          <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent" (click)="deleteUserContact(usercon) ">Borrar</button>
+        </td>
+      </tr>
+
+
+    </tbody>
+  </table>
+</div>
