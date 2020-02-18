@@ -8,6 +8,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { AppRoutingModule } from './app.routing.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { EditUsercontactComponent } from './edit-usercontact/edit-usercontact.component';
+import {CookiesComponent} from './cookies/cookies.component';
+import {PrivacyComponent} from './privacy/privacy.component';
 
 
 @NgModule({
@@ -16,7 +18,9 @@ import { EditUsercontactComponent } from './edit-usercontact/edit-usercontact.co
     AddUsercontactComponent,
     UsercontactComponent,
     DashboardComponent,
-    EditUsercontactComponent
+    EditUsercontactComponent,
+    CookiesComponent,
+    PrivacyComponent
   ],
   imports: [
     BrowserModule,
